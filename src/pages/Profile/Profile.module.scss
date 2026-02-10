@@ -92,3 +92,37 @@
   font-size: 0.85rem;
   font-weight: $font-weight-medium;
 }
+
+@media (max-width: 720px) {
+  .profileContainer {
+    align-items: flex-start;
+    padding: 2.5rem 6% 3.5rem;
+  }
+
+  .profileCard {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .profileImage {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+
+  .profileInfo h1 {
+    font-size: 1.6rem;
+  }
+
+  .profileMeta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .profileTags {
+    justify-content: center;
+  }
+}
