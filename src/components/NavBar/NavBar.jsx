@@ -1,50 +1,21 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import styles from "./NavBar.module.scss";
+import logo from "../../assets/logo.png";
+import fotologin from "../../assets/fotologin.png";
 
-//importando todos os componentes para serem usados nas rotas
-import Inicio from "../Inicio/Inicio";
-import Acoes from "../AcoesDaConnect/AcoesDaConnect";
-import QuemSomos from "../QuemSomos/QuemSomos";
-import Perfil from "../Perfil/Perfil";
-
-import Logo from "../../assets/logo.png";
-import FotoDoPerfil from "../../assets/perfil.jpeg";
-
-import styles from "./NavBar.module.scss"
-
-
-function NavBar() {
+export default function NavBar() {
   return (
-    <BrowserRouter>
-      <nav className={styles.navBar}>
-        <Link to="/">
-          <img className={styles.logo} src={Logo} alt="Logo" />
-        </Link>
+    <header className={styles.navbarContainer}>
+      <div className={styles.navbarSection}>
+        <img className={styles.logo} src={logo} alt="Logo da Connect" />
 
-        <ul>
-          <li>
-            <Link to="/"> Início </Link>
-          </li>
-          <li>
-            <Link to="/acoes"> Ações da Connect</Link>
-          </li>
-          <li>
-            <Link to="/quemSomos"> Quem Somos </Link>
-          </li>
-        </ul>
+        <nav className={styles.navbarInfo}>
+          <a href="/">Início</a>
+          <a href="/acoes">Ações da Connect</a>
+          <a href="/quem-somos">Quem Somos</a>
+        </nav>
 
-        <Link to="/perfil">
-          <img className={styles.imgPerfil} src={FotoDoPerfil} alt="Foto do perfil" />
-        </Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/acoes" element={<Acoes />} />
-        <Route path="/quemSomos" element={<QuemSomos />} />
-        <Route path="/perfil" element={<Perfil />} />
-      </Routes>
-    </BrowserRouter>
+        <img className={styles.avatar} src={fotologin} alt="Foto de login" />
+      </div>
+    </header>
   );
 }
-
-export default NavBar;

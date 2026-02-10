@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.homeContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $color-white;
+}
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5%;
+}
+
+.heroInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroInfo h1 {
+  font-family: $font-family-secondary;
+  color: $color-primary;
+  font-size: 3rem;
+}
+
+.heroImage {
+  width: 40%;
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+}
